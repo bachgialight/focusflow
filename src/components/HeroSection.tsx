@@ -1,31 +1,10 @@
 import { Button } from "@/components/ui/button";
-import { Download, Play, Star, X } from "lucide-react";
+import { Download, Play, Star } from "lucide-react";
 import heroPhoneMockup from "@/assets/hero-phone-mockup.png";
-import focusMondo from "@/assets/focus_mondo.png";
-import React from "react";
 
 export const HeroSection = () => {
-  const [show, setShow] = React.useState(true);
-  if (!show) return null;
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-brand-blue-light via-background to-brand-orange-light">
-      {/* Logo + Close button */}
-      <div className="absolute top-4 left-4 z-20 flex items-center gap-2">
-        <img
-          src={focusMondo}
-          alt="Focus Mondo Logo"
-          className="w-12 h-12 rounded-full shadow-lg cursor-pointer border-2 border-white hover:scale-105 transition-transform"
-          onClick={() => setShow(false)}
-          title="Click để đóng banner này"
-        />
-        <button
-          onClick={() => setShow(false)}
-          className="ml-2 p-1 rounded-full bg-white/80 hover:bg-white text-brand-blue shadow transition-colors"
-          title="Đóng banner"
-        >
-          <X className="w-5 h-5" />
-        </button>
-      </div>
       {/* Background decorations */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-10 w-32 h-32 bg-brand-blue rounded-full blur-xl animate-pulse"></div>
