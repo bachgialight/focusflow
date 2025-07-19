@@ -1,8 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Download, Play, Star } from "lucide-react";
 import heroPhoneMockup from "@/assets/hero-phone-mockup.png";
+import { useTranslation } from "react-i18next";
 
 export const HeroSection = () => {
+  const { t, i18n } = useTranslation();
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-brand-blue-light via-background to-brand-orange-light">
       {/* Background decorations */}
@@ -22,16 +24,11 @@ export const HeroSection = () => {
             </div>
             
             <h1 className="text-4xl lg:text-6xl font-bold leading-tight font-inter">
-              <span className="text-foreground">Tập trung & </span>
-              <span className="bg-gradient-to-r from-brand-blue to-brand-orange bg-clip-text text-transparent">
-                thư giãn
-              </span>
-              <br />
-              <span className="text-foreground">Tối ưu thời gian của bạn</span>
+              <span className="text-foreground">{t("welcome")}</span>
             </h1>
             
             <p className="text-xl text-muted-foreground max-w-2xl leading-relaxed">
-              Pomodoro + Âm nhạc thư giãn – Giải pháp đơn giản giúp bạn làm việc hiệu quả hơn mỗi ngày.
+              {t("description")}
             </p>
           </div>
 
@@ -52,6 +49,16 @@ export const HeroSection = () => {
               <Play className="w-5 h-5 mr-2" />
               Google Play
             </Button>
+          </div>
+
+          {/* Language Switcher */}
+          <div className="pt-4 flex gap-2 justify-center lg:justify-start">
+            <button onClick={() => i18n.changeLanguage("vi")}
+              className={`px-3 py-1 rounded ${i18n.language === "vi" ? "bg-brand-blue text-white" : "bg-white text-brand-blue border border-brand-blue"}`}
+            >{t("vietnamese")}</button>
+            <button onClick={() => i18n.changeLanguage("en")}
+              className={`px-3 py-1 rounded ${i18n.language === "en" ? "bg-brand-blue text-white" : "bg-white text-brand-blue border border-brand-blue"}`}
+            >{t("english")}</button>
           </div>
 
           {/* Stats */}
