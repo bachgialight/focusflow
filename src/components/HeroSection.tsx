@@ -20,15 +20,18 @@ export const HeroSection = () => {
           <div className="space-y-4">
             <div className="inline-flex items-center bg-brand-blue-light rounded-full px-4 py-2 text-sm font-medium text-brand-blue border border-brand-blue/20">
               <Star className="w-4 h-4 mr-2 fill-current" />
-              #1 App tập trung hiệu quả
+              {t("hero.badge")}
             </div>
             
             <h1 className="text-4xl lg:text-6xl font-bold leading-tight font-inter">
-              <span className="text-foreground">{t("welcome")}</span>
+              <span className="text-foreground">{t("hero.title")} </span>
+              <span className="bg-gradient-to-r from-brand-blue to-brand-orange bg-clip-text text-transparent">
+                {t("hero.subtitle")}
+              </span>
             </h1>
             
             <p className="text-xl text-muted-foreground max-w-2xl leading-relaxed">
-              {t("description")}
+              {t("hero.description")}
             </p>
           </div>
 
@@ -39,7 +42,7 @@ export const HeroSection = () => {
               className="bg-brand-blue hover:bg-brand-blue/90 shadow-medium transition-all duration-300 hover:shadow-large group"
             >
               <Download className="w-5 h-5 mr-2 group-hover:animate-bounce" />
-              Tải trên App Store
+              {t("hero.app_store")}
             </Button>
             <Button 
               size="lg" 
@@ -47,7 +50,7 @@ export const HeroSection = () => {
               className="border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white transition-all duration-300"
             >
               <Play className="w-5 h-5 mr-2" />
-              Google Play
+              {t("hero.google_play")}
             </Button>
           </div>
 
@@ -55,25 +58,25 @@ export const HeroSection = () => {
           <div className="pt-4 flex gap-2 justify-center lg:justify-start">
             <button onClick={() => i18n.changeLanguage("vi")}
               className={`px-3 py-1 rounded ${i18n.language === "vi" ? "bg-brand-blue text-white" : "bg-white text-brand-blue border border-brand-blue"}`}
-            >{t("vietnamese")}</button>
+            >{t("language.vietnamese")}</button>
             <button onClick={() => i18n.changeLanguage("en")}
               className={`px-3 py-1 rounded ${i18n.language === "en" ? "bg-brand-blue text-white" : "bg-white text-brand-blue border border-brand-blue"}`}
-            >{t("english")}</button>
+            >{t("language.english")}</button>
           </div>
 
           {/* Stats */}
           <div className="flex flex-wrap gap-8 justify-center lg:justify-start pt-8">
             <div className="text-center">
               <div className="text-3xl font-bold text-brand-blue">50K+</div>
-              <div className="text-sm text-muted-foreground">Người dùng</div>
+              <div className="text-sm text-muted-foreground">{t("hero.stats.users")}</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-brand-blue">4.9★</div>
-              <div className="text-sm text-muted-foreground">Đánh giá</div>
+              <div className="text-sm text-muted-foreground">{t("hero.stats.rating")}</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-brand-blue">100M+</div>
-              <div className="text-sm text-muted-foreground">Phút tập trung</div>
+              <div className="text-sm text-muted-foreground">{t("hero.stats.minutes")}</div>
             </div>
           </div>
         </div>

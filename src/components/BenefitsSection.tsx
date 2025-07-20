@@ -1,27 +1,30 @@
 import { Brain, Target, TrendingUp, Heart } from "lucide-react";
 import appFeaturesMockup from "@/assets/app-features-mockup.png";
+import { useTranslation } from "react-i18next";
 
 export const BenefitsSection = () => {
+  const { t } = useTranslation();
+  
   const benefits = [
     {
       icon: Brain,
-      title: "Tăng sự tập trung",
-      description: "Kỹ thuật Pomodoro được chứng minh khoa học giúp não bộ duy trì sự tập trung cao trong thời gian dài hơn."
+      title: t("benefits.focus.title"),
+      description: t("benefits.focus.description")
     },
     {
       icon: Target,
-      title: "Quản lý thời gian thông minh",
-      description: "Chia nhỏ công việc thành các khối thời gian hợp lý, tránh tình trạng kiệt sức và procrastination."
+      title: t("benefits.time.title"),
+      description: t("benefits.time.description")
     },
     {
       icon: TrendingUp,
-      title: "Xây dựng thói quen hiệu quả",
-      description: "Theo dõi tiến độ hằng ngày, tạo động lực và duy trì thói quen học tập làm việc bền vững."
+      title: t("benefits.habit.title"),
+      description: t("benefits.habit.description")
     },
     {
       icon: Heart,
-      title: "Giảm stress, tăng wellbeing",
-      description: "Âm nhạc thư giãn kết hợp nghỉ ngơi đều đặn giúp giảm căng thẳng và cải thiện sức khỏe tinh thần."
+      title: t("benefits.wellbeing.title"),
+      description: t("benefits.wellbeing.description")
     }
   ];
 
@@ -43,15 +46,13 @@ export const BenefitsSection = () => {
           <div className="space-y-12 order-1 lg:order-2">
             <div className="text-center lg:text-left">
               <h2 className="text-3xl lg:text-5xl font-bold mb-6 font-inter">
-                <span className="text-foreground">Lợi ích </span>
+                <span className="text-foreground">{t("benefits.title")} </span>
                 <span className="bg-gradient-to-r from-brand-blue to-brand-orange bg-clip-text text-transparent">
-                  tuyệt vời
+                  {t("benefits.subtitle")}
                 </span>
-                <br />
-                <span className="text-foreground">cho người dùng</span>
               </h2>
               <p className="text-xl text-muted-foreground leading-relaxed">
-                Không chỉ là một ứng dụng, mà là người bạn đồng hành trong hành trình phát triển bản thân
+                {t("benefits.description")}
               </p>
             </div>
 

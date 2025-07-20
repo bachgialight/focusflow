@@ -1,7 +1,128 @@
 {
-  "welcome": "Welcome to FocusFlow!",
-  "description": "Pomodoro app with relaxing music.",
-  "change_language": "Change language",
-  "english": "English",
-  "vietnamese": "Vietnamese"
+  "hero": {
+    "badge": "#1 Focus App",
+    "title": "Focus & Relax",
+    "subtitle": "Optimize your time",
+    "description": "Pomodoro + Relaxing Music – A simple solution to help you work more efficiently every day.",
+    "app_store": "Download on App Store",
+    "google_play": "Google Play",
+    "stats": {
+      "users": "Users",
+      "rating": "Rating",
+      "minutes": "Focus Minutes"
+    }
+  },
+  "features": {
+    "title": "Key Features",
+    "subtitle": "Everything you need to optimize your time and enhance focus in a single app",
+    "pomodoro": {
+      "title": "Flexible Pomodoro Timer",
+      "description": "Customize work and break times according to personal needs. From 15-60 minutes per focus session."
+    },
+    "music": {
+      "title": "Rich Relaxing Music Library",
+      "description": "Lo-fi, nature sounds, classical piano and ambient music to help you focus maximally."
+    },
+    "stats": {
+      "title": "Detailed Statistics",
+      "description": "Track focus habits, effective work time and personal progress through visual charts."
+    },
+    "dark_mode": {
+      "title": "Dark/Light Mode",
+      "description": "Eye-friendly interface, automatically switches based on time or customizable preferences."
+    },
+    "smooth": {
+      "title": "Smooth Experience",
+      "description": "No distracting ads, simple interface, optimized for long-term focus."
+    },
+    "security": {
+      "title": "Absolute Security",
+      "description": "Personal data is safely protected, works offline, doesn't collect unnecessary information."
+    }
+  },
+  "benefits": {
+    "title": "Amazing Benefits",
+    "subtitle": "for users",
+    "description": "Not just an app, but a companion in your personal development journey",
+    "focus": {
+      "title": "Increase Focus",
+      "description": "Scientifically proven Pomodoro technique helps the brain maintain high concentration for longer periods."
+    },
+    "time": {
+      "title": "Smart Time Management",
+      "description": "Break work into reasonable time blocks, avoid burnout and procrastination."
+    },
+    "habit": {
+      "title": "Build Effective Habits",
+      "description": "Track daily progress, create motivation and maintain sustainable study and work habits."
+    },
+    "wellbeing": {
+      "title": "Reduce Stress, Increase Wellbeing",
+      "description": "Relaxing music combined with regular breaks helps reduce stress and improve mental health."
+    }
+  },
+  "testimonials": {
+    "title": "What Users Say",
+    "subtitle": "about us",
+    "description": "Thousands of people have experienced and shared their success stories",
+    "student": {
+      "name": "Minh Anh",
+      "role": "Medical Student",
+      "content": "Thanks to FocusFlow, I can focus on studying much better! Since using the app, my exam preparation time has been twice as effective. The lo-fi music in the app is great, helping me not get distracted by surrounding noise."
+    },
+    "developer": {
+      "name": "Quang Huy",
+      "role": "Developer",
+      "content": "Amazing app for devs like me! Pomodoro timer is accurate, ambient music helps code flow continuously. Time tracking helps me track productivity really well."
+    },
+    "manager": {
+      "name": "Thanh Hằng",
+      "role": "Marketing Manager",
+      "content": "FocusFlow has completely changed my way of working. No more procrastination, all tasks are completed on time. Beautiful interface, easy to use, no annoying ads."
+    },
+    "highschool": {
+      "name": "Văn Đức",
+      "role": "High School Student",
+      "content": "Preparing for university with FocusFlow is really effective. 25 minutes of focus + 5 minutes of rest is just enough so the brain doesn't get overloaded. Nature music helps me relax and focus more."
+    }
+  },
+  "cta": {
+    "title": "Ready to optimize",
+    "subtitle": "your time?",
+    "description": "Millions of people have changed their way of working and studying. Now it's your turn to experience the difference today!",
+    "app_store": "Download Free - App Store",
+    "google_play": "Download Free - Google Play",
+    "features": {
+      "free": "Completely Free",
+      "no_ads": "No Ads",
+      "offline": "Works Offline",
+      "compatible": "iOS & Android Compatible"
+    },
+    "note": "Download and start immediately. No account registration required."
+  },
+  "footer": {
+    "description": "Pomodoro app combined with relaxing music, helping you optimize time and enhance focus effectively.",
+    "product": "Product",
+    "features": "Features",
+    "benefits": "Benefits",
+    "testimonials": "Reviews",
+    "updates": "Updates",
+    "support": "Support",
+    "help": "Help",
+    "contact": "Contact",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "company": "Company",
+    "about": "About Us",
+    "careers": "Careers",
+    "blog": "Blog",
+    "made_with_love": "Made with love in Vietnam",
+    "data_security": "Data Security",
+    "copyright": "© 2024 FocusFlow. All rights reserved."
+  },
+  "language": {
+    "change": "Change language",
+    "english": "English",
+    "vietnamese": "Vietnamese"
+  }
 } 

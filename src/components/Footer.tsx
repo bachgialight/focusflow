@@ -1,6 +1,9 @@
 import { Heart, Mail, Globe, Shield } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 export const Footer = () => {
+  const { t } = useTranslation();
+  
   return (
     <footer className="bg-foreground text-white py-16">
       <div className="container mx-auto px-6">
@@ -12,54 +15,53 @@ export const Footer = () => {
               <span className="text-brand-orange">Flow</span>
             </h3>
             <p className="text-white/70 leading-relaxed">
-              Ứng dụng Pomodoro kết hợp nhạc thư giãn, giúp bạn tối ưu thời gian và tăng cường sự tập trung hiệu quả.
+              {t("footer.description")}
             </p>
           </div>
 
           {/* Product */}
           <div className="space-y-4">
-            <h4 className="text-lg font-semibold">Sản phẩm</h4>
+            <h4 className="text-lg font-semibold">{t("footer.product")}</h4>
             <ul className="space-y-2 text-white/70">
-              <li><a href="#features" className="hover:text-brand-blue transition-colors">Tính năng</a></li>
-              <li><a href="#benefits" className="hover:text-brand-blue transition-colors">Lợi ích</a></li>
-              <li><a href="#testimonials" className="hover:text-brand-blue transition-colors">Đánh giá</a></li>
-              <li><a href="#" className="hover:text-brand-blue transition-colors">Cập nhật</a></li>
+              <li><a href="#features" className="hover:text-brand-blue transition-colors">{t("footer.features")}</a></li>
+              <li><a href="#benefits" className="hover:text-brand-blue transition-colors">{t("footer.benefits")}</a></li>
+              <li><a href="#testimonials" className="hover:text-brand-blue transition-colors">{t("footer.testimonials")}</a></li>
+              <li><a href="#" className="hover:text-brand-blue transition-colors">{t("footer.updates")}</a></li>
             </ul>
           </div>
 
           {/* Support */}
           <div className="space-y-4">
-            <h4 className="text-lg font-semibold">Hỗ trợ</h4>
+            <h4 className="text-lg font-semibold">{t("footer.support")}</h4>
             <ul className="space-y-2 text-white/70">
-              <li><a href="#" className="hover:text-brand-blue transition-colors">Trung tâm trợ giúp</a></li>
-              <li><a href="#" className="hover:text-brand-blue transition-colors">Hướng dẫn sử dụng</a></li>
-              <li><a href="#" className="hover:text-brand-blue transition-colors">Liên hệ</a></li>
-              <li><a href="#" className="hover:text-brand-blue transition-colors">Báo lỗi</a></li>
+              <li><a href="#" className="hover:text-brand-blue transition-colors">{t("footer.help")}</a></li>
+              <li><a href="#" className="hover:text-brand-blue transition-colors">{t("footer.contact")}</a></li>
+              <li><a href="#" className="hover:text-brand-blue transition-colors">{t("footer.privacy")}</a></li>
+              <li><a href="#" className="hover:text-brand-blue transition-colors">{t("footer.terms")}</a></li>
             </ul>
           </div>
 
-          {/* Legal */}
+          {/* Company */}
           <div className="space-y-4">
-            <h4 className="text-lg font-semibold">Pháp lý</h4>
+            <h4 className="text-lg font-semibold">{t("footer.company")}</h4>
             <ul className="space-y-2 text-white/70">
-              <li><a href="#" className="hover:text-brand-blue transition-colors">Điều khoản dịch vụ</a></li>
-              <li><a href="#" className="hover:text-brand-blue transition-colors">Chính sách bảo mật</a></li>
-              <li><a href="#" className="hover:text-brand-blue transition-colors">Cookie Policy</a></li>
+              <li><a href="#" className="hover:text-brand-blue transition-colors">{t("footer.about")}</a></li>
+              <li><a href="#" className="hover:text-brand-blue transition-colors">{t("footer.careers")}</a></li>
+              <li><a href="#" className="hover:text-brand-blue transition-colors">{t("footer.blog")}</a></li>
             </ul>
           </div>
         </div>
 
-        {/* Bottom section */}
         <div className="border-t border-white/20 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="flex items-center gap-6 text-white/70 text-sm">
               <div className="flex items-center gap-2">
                 <Heart className="w-4 h-4 text-red-500" />
-                Made with love in Vietnam
+                {t("footer.made_with_love")}
               </div>
               <div className="flex items-center gap-2">
                 <Shield className="w-4 h-4" />
-                Bảo mật dữ liệu
+                {t("footer.data_security")}
               </div>
             </div>
 
@@ -74,7 +76,7 @@ export const Footer = () => {
           </div>
 
           <div className="text-center mt-6 text-white/50 text-sm">
-            © 2024 FocusFlow. Tất cả quyền được bảo lưu.
+            {t("footer.copyright")}
           </div>
         </div>
       </div>

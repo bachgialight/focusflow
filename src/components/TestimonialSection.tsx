@@ -1,35 +1,38 @@
 import { Star, Quote } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { useTranslation } from "react-i18next";
 
 export const TestimonialSection = () => {
+  const { t } = useTranslation();
+  
   const testimonials = [
     {
-      name: "Minh Anh",
-      role: "Sinh viên Y khoa",
+      name: t("testimonials.student.name"),
+      role: t("testimonials.student.role"),
       avatar: "👩‍🎓",
       rating: 5,
-      content: "Nhờ FocusFlow mình tập trung học hơn hẳn! Từ khi dùng app, thời gian ôn thi hiệu quả gấp đôi. Nhạc lo-fi trong app rất hay, giúp mình không bị phân tán bởi tiếng ồn xung quanh."
+      content: t("testimonials.student.content")
     },
     {
-      name: "Quang Huy",
-      role: "Lập trình viên",
+      name: t("testimonials.developer.name"),
+      role: t("testimonials.developer.role"),
       avatar: "👨‍💻",
       rating: 5,
-      content: "App tuyệt vời cho dân dev như mình! Pomodoro timer chính xác, nhạc ambient giúp code flow suốt. Thống kê thời gian làm việc giúp mình track productivity rất tốt."
+      content: t("testimonials.developer.content")
     },
     {
-      name: "Thanh Hằng",
-      role: "Marketing Manager",
+      name: t("testimonials.manager.name"),
+      role: t("testimonials.manager.role"),
       avatar: "👩‍💼",
       rating: 5,
-      content: "FocusFlow đã thay đổi cách làm việc của tôi hoàn toàn. Không còn procrastination, mọi task được hoàn thành đúng hạn. Giao diện đẹp, dễ sử dụng, không quảng cáo phiền phức."
+      content: t("testimonials.manager.content")
     },
     {
-      name: "Văn Đức",
-      role: "Học sinh THPT",
+      name: t("testimonials.highschool.name"),
+      role: t("testimonials.highschool.role"),
       avatar: "👨‍🎓",
       rating: 5,
-      content: "Chuẩn bị thi đại học với FocusFlow thật sự hiệu quả. 25 phút tập trung + 5 phút nghỉ vừa đủ để não không bị quá tải. Nhạc thiên nhiên giúp em thư giãn và tập trung hơn."
+      content: t("testimonials.highschool.content")
     }
   ];
 
@@ -38,14 +41,13 @@ export const TestimonialSection = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-5xl font-bold mb-6 font-inter">
-            <span className="text-foreground">Người dùng </span>
+            <span className="text-foreground">{t("testimonials.title")} </span>
             <span className="bg-gradient-to-r from-brand-blue to-brand-orange bg-clip-text text-transparent">
-              nói gì
+              {t("testimonials.subtitle")}
             </span>
-            <span className="text-foreground"> về chúng tôi</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Hàng nghìn người đã trải nghiệm và chia sẻ câu chuyện thành công của họ
+            {t("testimonials.description")}
           </p>
         </div>
 

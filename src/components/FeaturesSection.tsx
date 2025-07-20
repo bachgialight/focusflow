@@ -1,37 +1,40 @@
 import { Clock, Music, BarChart3, Moon, Zap, Shield } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { useTranslation } from "react-i18next";
 
 export const FeaturesSection = () => {
+  const { t } = useTranslation();
+  
   const features = [
     {
       icon: Clock,
-      title: "Bộ đếm Pomodoro linh hoạt",
-      description: "Tùy chỉnh thời gian làm việc và nghỉ ngơi theo nhu cầu cá nhân. Từ 15-60 phút cho mỗi phiên tập trung."
+      title: t("features.pomodoro.title"),
+      description: t("features.pomodoro.description")
     },
     {
       icon: Music,
-      title: "Kho nhạc thư giãn phong phú",
-      description: "Lo-fi, âm thanh thiên nhiên, piano classical và ambient music giúp bạn tập trung tối đa."
+      title: t("features.music.title"),
+      description: t("features.music.description")
     },
     {
       icon: BarChart3,
-      title: "Thống kê chi tiết",
-      description: "Theo dõi thói quen tập trung, thời gian làm việc hiệu quả và tiến độ cá nhân qua biểu đồ trực quan."
+      title: t("features.stats.title"),
+      description: t("features.stats.description")
     },
     {
       icon: Moon,
-      title: "Chế độ Dark/Light",
-      description: "Giao diện thân thiện với mắt, tự động chuyển đổi theo thời gian hoặc tùy chỉnh theo sở thích."
+      title: t("features.dark_mode.title"),
+      description: t("features.dark_mode.description")
     },
     {
       icon: Zap,
-      title: "Trải nghiệm mượt mà",
-      description: "Không quảng cáo làm phân tán, giao diện đơn giản, tối ưu cho việc tập trung lâu dài."
+      title: t("features.smooth.title"),
+      description: t("features.smooth.description")
     },
     {
       icon: Shield,
-      title: "Bảo mật tuyệt đối",
-      description: "Dữ liệu cá nhân được bảo vệ an toàn, hoạt động offline, không thu thập thông tin không cần thiết."
+      title: t("features.security.title"),
+      description: t("features.security.description")
     }
   ];
 
@@ -40,13 +43,13 @@ export const FeaturesSection = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-5xl font-bold mb-6 font-inter">
-            <span className="text-foreground">Tính năng </span>
+            <span className="text-foreground">{t("features.title")} </span>
             <span className="bg-gradient-to-r from-brand-blue to-brand-orange bg-clip-text text-transparent">
-              nổi bật
+              {t("features.subtitle")}
             </span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Mọi thứ bạn cần để tối ưu hóa thời gian và tăng cường sự tập trung trong một ứng dụng duy nhất
+            {t("features.subtitle")}
           </p>
         </div>
 

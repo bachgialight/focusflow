@@ -1,7 +1,128 @@
 {
-  "welcome": "Chào mừng bạn đến với FocusFlow!",
-  "description": "Ứng dụng Pomodoro kết hợp nhạc thư giãn.",
-  "change_language": "Đổi ngôn ngữ",
-  "english": "Tiếng Anh",
-  "vietnamese": "Tiếng Việt"
+  "hero": {
+    "badge": "#1 App tập trung hiệu quả",
+    "title": "Tập trung & thư giãn",
+    "subtitle": "Tối ưu thời gian của bạn",
+    "description": "Pomodoro + Âm nhạc thư giãn – Giải pháp đơn giản giúp bạn làm việc hiệu quả hơn mỗi ngày.",
+    "app_store": "Tải trên App Store",
+    "google_play": "Google Play",
+    "stats": {
+      "users": "Người dùng",
+      "rating": "Đánh giá",
+      "minutes": "Phút tập trung"
+    }
+  },
+  "features": {
+    "title": "Tính năng nổi bật",
+    "subtitle": "Mọi thứ bạn cần để tối ưu hóa thời gian và tăng cường sự tập trung trong một ứng dụng duy nhất",
+    "pomodoro": {
+      "title": "Bộ đếm Pomodoro linh hoạt",
+      "description": "Tùy chỉnh thời gian làm việc và nghỉ ngơi theo nhu cầu cá nhân. Từ 15-60 phút cho mỗi phiên tập trung."
+    },
+    "music": {
+      "title": "Kho nhạc thư giãn phong phú",
+      "description": "Lo-fi, âm thanh thiên nhiên, piano classical và ambient music giúp bạn tập trung tối đa."
+    },
+    "stats": {
+      "title": "Thống kê chi tiết",
+      "description": "Theo dõi thói quen tập trung, thời gian làm việc hiệu quả và tiến độ cá nhân qua biểu đồ trực quan."
+    },
+    "dark_mode": {
+      "title": "Chế độ Dark/Light",
+      "description": "Giao diện thân thiện với mắt, tự động chuyển đổi theo thời gian hoặc tùy chỉnh theo sở thích."
+    },
+    "smooth": {
+      "title": "Trải nghiệm mượt mà",
+      "description": "Không quảng cáo làm phân tán, giao diện đơn giản, tối ưu cho việc tập trung lâu dài."
+    },
+    "security": {
+      "title": "Bảo mật tuyệt đối",
+      "description": "Dữ liệu cá nhân được bảo vệ an toàn, hoạt động offline, không thu thập thông tin không cần thiết."
+    }
+  },
+  "benefits": {
+    "title": "Lợi ích tuyệt vời",
+    "subtitle": "cho người dùng",
+    "description": "Không chỉ là một ứng dụng, mà là người bạn đồng hành trong hành trình phát triển bản thân",
+    "focus": {
+      "title": "Tăng sự tập trung",
+      "description": "Kỹ thuật Pomodoro được chứng minh khoa học giúp não bộ duy trì sự tập trung cao trong thời gian dài hơn."
+    },
+    "time": {
+      "title": "Quản lý thời gian thông minh",
+      "description": "Chia nhỏ công việc thành các khối thời gian hợp lý, tránh tình trạng kiệt sức và procrastination."
+    },
+    "habit": {
+      "title": "Xây dựng thói quen hiệu quả",
+      "description": "Theo dõi tiến độ hằng ngày, tạo động lực và duy trì thói quen học tập làm việc bền vững."
+    },
+    "wellbeing": {
+      "title": "Giảm stress, tăng wellbeing",
+      "description": "Âm nhạc thư giãn kết hợp nghỉ ngơi đều đặn giúp giảm căng thẳng và cải thiện sức khỏe tinh thần."
+    }
+  },
+  "testimonials": {
+    "title": "Người dùng nói gì",
+    "subtitle": "về chúng tôi",
+    "description": "Hàng nghìn người đã trải nghiệm và chia sẻ câu chuyện thành công của họ",
+    "student": {
+      "name": "Minh Anh",
+      "role": "Sinh viên Y khoa",
+      "content": "Nhờ FocusFlow mình tập trung học hơn hẳn! Từ khi dùng app, thời gian ôn thi hiệu quả gấp đôi. Nhạc lo-fi trong app rất hay, giúp mình không bị phân tán bởi tiếng ồn xung quanh."
+    },
+    "developer": {
+      "name": "Quang Huy",
+      "role": "Lập trình viên",
+      "content": "App tuyệt vời cho dân dev như mình! Pomodoro timer chính xác, nhạc ambient giúp code flow suốt. Thống kê thời gian làm việc giúp mình track productivity rất tốt."
+    },
+    "manager": {
+      "name": "Thanh Hằng",
+      "role": "Marketing Manager",
+      "content": "FocusFlow đã thay đổi cách làm việc của tôi hoàn toàn. Không còn procrastination, mọi task được hoàn thành đúng hạn. Giao diện đẹp, dễ sử dụng, không quảng cáo phiền phức."
+    },
+    "highschool": {
+      "name": "Văn Đức",
+      "role": "Học sinh THPT",
+      "content": "Chuẩn bị thi đại học với FocusFlow thật sự hiệu quả. 25 phút tập trung + 5 phút nghỉ vừa đủ để não không bị quá tải. Nhạc thiên nhiên giúp em thư giãn và tập trung hơn."
+    }
+  },
+  "cta": {
+    "title": "Sẵn sàng tối ưu",
+    "subtitle": "thời gian của bạn?",
+    "description": "Hàng triệu người đã thay đổi cách làm việc và học tập. Đến lượt bạn trải nghiệm sự khác biệt ngay hôm nay!",
+    "app_store": "Tải miễn phí - App Store",
+    "google_play": "Tải miễn phí - Google Play",
+    "features": {
+      "free": "Miễn phí hoàn toàn",
+      "no_ads": "Không quảng cáo",
+      "offline": "Hoạt động offline",
+      "compatible": "Tương thích iOS & Android"
+    },
+    "note": "Tải về và bắt đầu ngay lập tức. Không cần đăng ký tài khoản."
+  },
+  "footer": {
+    "description": "Ứng dụng Pomodoro kết hợp nhạc thư giãn, giúp bạn tối ưu thời gian và tăng cường sự tập trung hiệu quả.",
+    "product": "Sản phẩm",
+    "features": "Tính năng",
+    "benefits": "Lợi ích",
+    "testimonials": "Đánh giá",
+    "updates": "Cập nhật",
+    "support": "Hỗ trợ",
+    "help": "Trợ giúp",
+    "contact": "Liên hệ",
+    "privacy": "Chính sách",
+    "terms": "Điều khoản",
+    "company": "Công ty",
+    "about": "Về chúng tôi",
+    "careers": "Tuyển dụng",
+    "blog": "Blog",
+    "made_with_love": "Made with love in Vietnam",
+    "data_security": "Bảo mật dữ liệu",
+    "copyright": "© 2024 FocusFlow. Tất cả quyền được bảo lưu."
+  },
+  "language": {
+    "change": "Đổi ngôn ngữ",
+    "english": "Tiếng Anh",
+    "vietnamese": "Tiếng Việt"
+  }
 } 

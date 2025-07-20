@@ -1,7 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Download, Smartphone, ArrowRight } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 export const CTASection = () => {
+  const { t } = useTranslation();
+  
   return (
     <section className="py-24 bg-gradient-to-r from-brand-blue via-brand-blue/90 to-brand-orange relative overflow-hidden">
       {/* Background decorations */}
@@ -15,15 +18,13 @@ export const CTASection = () => {
         <div className="max-w-4xl mx-auto space-y-8">
           <div className="space-y-6">
             <h2 className="text-3xl lg:text-5xl font-bold text-white font-inter leading-tight">
-              Sẵn sàng tối ưu 
+              {t("cta.title")}
               <br />
-              <span className="text-brand-orange-light">thời gian của bạn?</span>
+              <span className="text-brand-orange-light">{t("cta.subtitle")}</span>
             </h2>
             
             <p className="text-xl text-white/90 max-w-2xl mx-auto leading-relaxed">
-              Hàng triệu người đã thay đổi cách làm việc và học tập. 
-              <br />
-              Đến lượt bạn trải nghiệm sự khác biệt ngay hôm nay!
+              {t("cta.description")}
             </p>
           </div>
 
@@ -34,7 +35,7 @@ export const CTASection = () => {
               className="bg-white text-brand-blue hover:bg-white/90 shadow-large transition-all duration-300 hover:shadow-xl hover:scale-105 group font-medium px-8 py-4"
             >
               <Download className="w-5 h-5 mr-2 group-hover:animate-bounce" />
-              Tải miễn phí - App Store
+              {t("cta.app_store")}
             </Button>
             
             <Button 
@@ -43,7 +44,7 @@ export const CTASection = () => {
               className="border-2 border-white text-white hover:bg-white hover:text-brand-blue transition-all duration-300 hover:scale-105 font-medium px-8 py-4"
             >
               <Smartphone className="w-5 h-5 mr-2" />
-              Tải miễn phí - Google Play
+              {t("cta.google_play")}
             </Button>
           </div>
 
@@ -52,24 +53,24 @@ export const CTASection = () => {
             <div className="flex flex-wrap gap-6 justify-center text-white/80 text-sm">
               <div className="flex items-center gap-2">
                 <ArrowRight className="w-4 h-4" />
-                Miễn phí hoàn toàn
+                {t("cta.features.free")}
               </div>
               <div className="flex items-center gap-2">
                 <ArrowRight className="w-4 h-4" />
-                Không quảng cáo
+                {t("cta.features.no_ads")}
               </div>
               <div className="flex items-center gap-2">
                 <ArrowRight className="w-4 h-4" />
-                Hoạt động offline
+                {t("cta.features.offline")}
               </div>
               <div className="flex items-center gap-2">
                 <ArrowRight className="w-4 h-4" />
-                Tương thích iOS & Android
+                {t("cta.features.compatible")}
               </div>
             </div>
             
             <p className="text-white/70 text-sm">
-              Tải về và bắt đầu ngay lập tức. Không cần đăng ký tài khoản.
+              {t("cta.note")}
             </p>
           </div>
         </div>
