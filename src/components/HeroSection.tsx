@@ -65,6 +65,18 @@ export const HeroSection = () => {
             >{t("language.english")}</button>
           </div>
 
+          {/* Hero Image - Mobile Only */}
+          <div className="relative flex justify-center lg:hidden">
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-brand-blue/20 to-brand-orange/20 rounded-3xl blur-2xl scale-110"></div>
+              <img 
+                src={heroPhoneMockup} 
+                alt="FocusFlow App Interface" 
+                className="relative z-10 w-80 sm:w-96 h-auto drop-shadow-2xl animate-float rounded-2xl"
+              />
+            </div>
+          </div>
+
           {/* Stats */}
           <div className="flex flex-wrap gap-6 sm:gap-8 justify-center lg:justify-start pt-6 sm:pt-8 px-4 sm:px-0">
             <div className="text-center">
@@ -82,14 +94,14 @@ export const HeroSection = () => {
           </div>
         </div>
 
-        {/* Hero Image */}
-        <div className="relative flex justify-center order-first lg:order-last">
+        {/* Hero Image - Desktop Only */}
+        <div className="relative flex justify-center hidden lg:flex">
           <div className="relative">
             <div className="absolute inset-0 bg-gradient-to-r from-brand-blue/20 to-brand-orange/20 rounded-3xl blur-2xl scale-110"></div>
             <img 
               src={heroPhoneMockup} 
               alt="FocusFlow App Interface" 
-              className="relative z-10 w-80 sm:w-96 md:w-[420px] lg:w-[480px] xl:w-[520px] h-auto drop-shadow-2xl animate-float"
+              className="relative z-10 w-[480px] xl:w-[520px] h-auto drop-shadow-2xl animate-float rounded-2xl"
             />
           </div>
         </div>
