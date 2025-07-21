@@ -105,7 +105,8 @@
     "email_invalid_title": "Invalid email",
     "email_invalid_desc": "Please enter a valid email address.",
     "email_success_title": "Subscribed!",
-    "email_success_desc": "You will be notified when the app launches."
+    "email_success_desc": "You will be notified when the app launches.",
+    "download_toast": "Enter your email to get notified when the app launches!"
   },
   "footer": {
     "description": "Pomodoro app combined with relaxing music, helping you optimize time and enhance focus effectively.",

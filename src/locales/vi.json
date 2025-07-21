@@ -105,7 +105,8 @@
     "email_invalid_title": "Email không hợp lệ",
     "email_invalid_desc": "Vui lòng nhập đúng địa chỉ email.",
     "email_success_title": "Đăng ký thành công!",
-    "email_success_desc": "Bạn sẽ nhận được thông báo khi ứng dụng ra mắt."
+    "email_success_desc": "Bạn sẽ nhận được thông báo khi ứng dụng ra mắt.",
+    "download_toast": "Hãy nhập email để nhận thông báo khi app ra mắt!"
   },
   "footer": {
     "description": "Ứng dụng Pomodoro kết hợp nhạc thư giãn, giúp bạn tối ưu thời gian và tăng cường sự tập trung hiệu quả.",

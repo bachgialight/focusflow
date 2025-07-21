@@ -5,14 +5,15 @@ import appstoreImage from "@/assets/appstore_image.png";
 import chplayImage from "@/assets/chplay_image.png";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
-import React, { useRef } from "react";
+import React, { useRef, forwardRef } from "react";
 
-export const CTASection = () => {
+export const CTASection = forwardRef<HTMLDivElement>((props, ref) => {
   const { t } = useTranslation();
   const { toast } = useToast();
   const emailInputRef = useRef<HTMLInputElement>(null);
   const [email, setEmail] = React.useState("");
   const [loading, setLoading] = React.useState(false);
+  const [error, setError] = React.useState("");
 
   const handleDownloadClick = () => {
     emailInputRef.current?.focus();
@@ -23,22 +24,35 @@ export const CTASection = () => {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setError("");
     if (!validateEmail(email)) {
+      setError(t("cta.email_invalid_desc") || "Email không hợp lệ");
       toast({ title: t("cta.email_invalid_title"), description: t("cta.email_invalid_desc"), variant: "destructive" });
       return;
     }
     setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-      setEmail("");
-      toast({ title: t("cta.email_success_title"), description: t("cta.email_success_desc") });
-    }, 1200);
+    try {
+      const res = await fetch("https://formspree.io/f/myzpkvbg", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
+      if (res.ok) {
+        setEmail("");
+        toast({ title: t("cta.email_success_title"), description: t("cta.email_success_desc") });
+      } else {
+        throw new Error();
+      }
+    } catch {
+      toast({ title: "Lỗi", description: "Không gửi được email, thử lại sau.", variant: "destructive" });
+    }
+    setLoading(false);
   };
   
   return (
-    <section className="py-16 sm:py-24 bg-gradient-to-r from-brand-blue via-brand-blue/90 to-brand-orange relative overflow-hidden">
+    <section ref={ref} className="py-16 sm:py-24 bg-gradient-to-r from-brand-blue via-brand-blue/90 to-brand-orange relative overflow-hidden">
       {/* Background decorations */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-10 left-10 w-32 h-32 bg-white rounded-full blur-xl animate-pulse"></div>
@@ -83,20 +97,27 @@ export const CTASection = () => {
           </div>
 
           {/* Email form */}
-          <form onSubmit={handleSubmit} className="mt-8 max-w-md mx-auto flex flex-col sm:flex-row gap-3 items-center justify-center" autoComplete="off">
+          <form onSubmit={handleSubmit} className="mt-8 max-w-md mx-auto flex flex-col sm:flex-row gap-3 items-center justify-center w-full" autoComplete="off" noValidate>
+            <label htmlFor="cta-email" className="sr-only">{t("cta.email_placeholder")}</label>
             <Input
               ref={emailInputRef}
+              id="cta-email"
+              name="email"
               type="email"
+              autoComplete="email"
+              aria-label={t("cta.email_placeholder") || "Nhập email của bạn"}
               placeholder={t("cta.email_placeholder") || "Nhập email của bạn"}
               value={email}
               onChange={e => setEmail(e.target.value)}
               className="flex-1 min-w-0"
               required
+              disabled={loading}
             />
             <Button type="submit" size="lg" disabled={loading || !email} className="w-full sm:w-auto">
               {loading ? t("cta.sending") : t("cta.notify_me")}
             </Button>
           </form>
+          {error && <div className="text-red-500 text-sm mt-2 text-center w-full">{error}</div>}
 
           {/* Additional info */}
           <div className="pt-6 sm:pt-8 space-y-4">
@@ -127,4 +148,4 @@ export const CTASection = () => {
       </div>
     </section>
   );
-};
+});

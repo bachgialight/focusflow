@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 import appstoreImage from "@/assets/appstore_image.png";
 import chplayImage from "@/assets/chplay_image.png";
 
-export const HeroSection = () => {
+export const HeroSection = ({ onDownloadClick }: { onDownloadClick?: () => void }) => {
   const { t, i18n } = useTranslation();
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-brand-blue-light via-background to-brand-orange-light">
@@ -43,6 +43,7 @@ export const HeroSection = () => {
             <Button 
               size="lg" 
               className="bg-brand-blue hover:bg-brand-blue/90 shadow-medium transition-all duration-300 hover:shadow-large group text-base sm:text-base py-3 sm:py-4 flex items-center"
+              onClick={onDownloadClick}
             >
               <img src={appstoreImage} alt="App Store" className="w-7 h-auto mr-2" />
               {t("hero.app_store")}
@@ -51,6 +52,7 @@ export const HeroSection = () => {
               size="lg" 
               variant="outline"
               className="border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white transition-all duration-300 text-base sm:text-base py-3 sm:py-4 flex items-center"
+              onClick={onDownloadClick}
             >
               <img src={chplayImage} alt="Google Play" className="w-7 h-auto mr-2" />
               {t("hero.google_play")}
