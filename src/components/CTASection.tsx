@@ -1,9 +1,41 @@
 import { Button } from "@/components/ui/button";
 import { Download, Smartphone, ArrowRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import appstoreImage from "@/assets/appstore_image.png";
+import chplayImage from "@/assets/chplay_image.png";
+import { Input } from "@/components/ui/input";
+import { useToast } from "@/hooks/use-toast";
+import React, { useRef } from "react";
 
 export const CTASection = () => {
   const { t } = useTranslation();
+  const { toast } = useToast();
+  const emailInputRef = useRef<HTMLInputElement>(null);
+  const [email, setEmail] = React.useState("");
+  const [loading, setLoading] = React.useState(false);
+
+  const handleDownloadClick = () => {
+    emailInputRef.current?.focus();
+    emailInputRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+  };
+
+  const validateEmail = (email: string) => {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!validateEmail(email)) {
+      toast({ title: t("cta.email_invalid_title"), description: t("cta.email_invalid_desc"), variant: "destructive" });
+      return;
+    }
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+      setEmail("");
+      toast({ title: t("cta.email_success_title"), description: t("cta.email_success_desc") });
+    }, 1200);
+  };
   
   return (
     <section className="py-16 sm:py-24 bg-gradient-to-r from-brand-blue via-brand-blue/90 to-brand-orange relative overflow-hidden">
@@ -32,21 +64,39 @@ export const CTASection = () => {
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-4 justify-center items-center px-4 sm:px-0">
             <Button 
               size="lg" 
-              className="bg-white text-brand-blue hover:bg-white/90 shadow-large transition-all duration-300 hover:shadow-xl hover:scale-105 group font-medium px-6 sm:px-8 py-4 sm:py-4 text-base sm:text-base w-full sm:w-auto"
+              className="bg-white text-brand-blue hover:bg-white/90 shadow-large transition-all duration-300 hover:shadow-xl hover:scale-105 group font-medium px-6 sm:px-8 py-4 sm:py-4 text-base sm:text-base w-full sm:w-auto flex items-center"
+              onClick={handleDownloadClick}
             >
-              <Download className="w-5 h-5 sm:w-5 sm:h-5 mr-2 group-hover:animate-bounce" />
+              <img src={appstoreImage} alt="App Store" className="w-7 h-auto mr-2" />
               {t("cta.app_store")}
             </Button>
             
             <Button 
               size="lg" 
               variant="outline"
-              className="border-2 border-white text-white hover:bg-white hover:text-brand-blue transition-all duration-300 hover:scale-105 font-medium px-6 sm:px-8 py-4 sm:py-4 text-base sm:text-base w-full sm:w-auto"
+              className="border-2 border-white text-white hover:bg-white hover:text-brand-blue transition-all duration-300 hover:scale-105 font-medium px-6 sm:px-8 py-4 sm:py-4 text-base sm:text-base w-full sm:w-auto flex items-center"
+              onClick={handleDownloadClick}
             >
-              <Smartphone className="w-5 h-5 sm:w-5 sm:h-5 mr-2" />
+              <img src={chplayImage} alt="Google Play" className="w-7 h-auto mr-2" />
               {t("cta.google_play")}
             </Button>
           </div>
+
+          {/* Email form */}
+          <form onSubmit={handleSubmit} className="mt-8 max-w-md mx-auto flex flex-col sm:flex-row gap-3 items-center justify-center" autoComplete="off">
+            <Input
+              ref={emailInputRef}
+              type="email"
+              placeholder={t("cta.email_placeholder") || "Nhập email của bạn"}
+              value={email}
+              onChange={e => setEmail(e.target.value)}
+              className="flex-1 min-w-0"
+              required
+            />
+            <Button type="submit" size="lg" disabled={loading || !email} className="w-full sm:w-auto">
+              {loading ? t("cta.sending") : t("cta.notify_me")}
+            </Button>
+          </form>
 
           {/* Additional info */}
           <div className="pt-6 sm:pt-8 space-y-4">

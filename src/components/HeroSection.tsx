@@ -2,6 +2,8 @@ import { Button } from "@/components/ui/button";
 import { Download, Play, Star } from "lucide-react";
 import heroPhoneMockup from "@/assets/hero-phone-mockup.png";
 import { useTranslation } from "react-i18next";
+import appstoreImage from "@/assets/appstore_image.png";
+import chplayImage from "@/assets/chplay_image.png";
 
 export const HeroSection = () => {
   const { t, i18n } = useTranslation();
@@ -40,17 +42,17 @@ export const HeroSection = () => {
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-4 justify-center lg:justify-start px-4 sm:px-0">
             <Button 
               size="lg" 
-              className="bg-brand-blue hover:bg-brand-blue/90 shadow-medium transition-all duration-300 hover:shadow-large group text-base sm:text-base py-3 sm:py-4"
+              className="bg-brand-blue hover:bg-brand-blue/90 shadow-medium transition-all duration-300 hover:shadow-large group text-base sm:text-base py-3 sm:py-4 flex items-center"
             >
-              <Download className="w-5 h-5 sm:w-5 sm:h-5 mr-2 group-hover:animate-bounce" />
+              <img src={appstoreImage} alt="App Store" className="w-7 h-auto mr-2" />
               {t("hero.app_store")}
             </Button>
             <Button 
               size="lg" 
               variant="outline"
-              className="border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white transition-all duration-300 text-base sm:text-base py-3 sm:py-4"
+              className="border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white transition-all duration-300 text-base sm:text-base py-3 sm:py-4 flex items-center"
             >
-              <Play className="w-5 h-5 sm:w-5 sm:h-5 mr-2" />
+              <img src={chplayImage} alt="Google Play" className="w-7 h-auto mr-2" />
               {t("hero.google_play")}
             </Button>
           </div>
