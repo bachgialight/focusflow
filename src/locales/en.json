@@ -5,7 +5,7 @@
     "subtitle": "Optimize your time",
     "description": "Pomodoro + Relaxing Music – A simple solution to help you work more efficiently every day.",
     "app_store": "Download on App Store",
-    "google_play": "Google Play",
+    "google_play": "Download on Google Play",
     "stats": {
       "users": "Users",
       "rating": "Rating",
@@ -20,8 +20,8 @@
       "description": "Customize work and break times according to personal needs. From 15-60 minutes per focus session."
     },
     "music": {
-      "title": "Rich Relaxing Music Library",
-      "description": "Lo-fi, nature sounds, classical piano and ambient music to help you focus maximally."
+      "title": "Music from Your Device",
+      "description": "Select and play audio files from your device to help you focus in your own way."
     },
     "stats": {
       "title": "Detailed Statistics",
@@ -59,6 +59,10 @@
     "wellbeing": {
       "title": "Reduce Stress, Increase Wellbeing",
       "description": "Relaxing music combined with regular breaks helps reduce stress and improve mental health."
+    },
+    "sleep_music": {
+      "title": "Music for Better Sleep",
+      "description": "Listen to soothing music designed to help you fall asleep faster and improve sleep quality."
     }
   },
   "testimonials": {
@@ -68,7 +72,7 @@
     "student": {
       "name": "Minh Anh",
       "role": "Medical Student",
-      "content": "Thanks to FocusFlow, I can focus on studying much better! Since using the app, my exam preparation time has been twice as effective. The lo-fi music in the app is great, helping me not get distracted by surrounding noise."
+      "content": "FocusTune has helped me concentrate much better! Since I started using the app, my study time has become twice as effective. I can listen to music from my device while studying, which helps block out distractions and background noise."
     },
     "developer": {
       "name": "Quang Huy",
@@ -78,12 +82,12 @@
     "manager": {
       "name": "Thanh Hằng",
       "role": "Marketing Manager",
-      "content": "FocusFlow has completely changed my way of working. No more procrastination, all tasks are completed on time. Beautiful interface, easy to use, no annoying ads."
+      "content": "FocusTune has completely changed my way of working. No more procrastination, all tasks are completed on time. Beautiful interface, easy to use, no annoying ads."
     },
     "highschool": {
       "name": "Văn Đức",
       "role": "High School Student",
-      "content": "Preparing for university with FocusFlow is really effective. 25 minutes of focus + 5 minutes of rest is just enough so the brain doesn't get overloaded. Nature music helps me relax and focus more."
+      "content": "Preparing for the university entrance exam with FocusTune has been truly effective. The 25-minute focus + 5-minute break keeps my brain from burning out. Sleep reminders and relaxing music at night help me wake up more energized for the next day."
     }
   },
   "cta": {
@@ -98,7 +102,7 @@
       "offline": "Works Offline",
       "compatible": "iOS & Android Compatible"
     },
-    "note": "Download and start immediately. No account registration required.",
+    "note": "Download and start immediately",
     "email_placeholder": "Enter your email to get notified when the app is available on App Store/Google Play",
     "notify_me": "Notify me",
     "sending": "Sending...",
@@ -124,13 +128,13 @@
     "about": "About Us",
     "careers": "Careers",
     "blog": "Blog",
-    "made_with_love": "Made with love in Vietnam",
+    "made_with_love": "Vietnam",
     "data_security": "Data Security",
-    "copyright": "© 2024 FocusFlow. All rights reserved."
+    "copyright": "© 2024 Make by FocusTune. All rights reserved."
   },
   "language": {
     "change": "Change language",
     "english": "English",
     "vietnamese": "Vietnamese"
   }
-} 
+}

@@ -12,7 +12,7 @@ export const Footer = () => {
           <div className="space-y-3 sm:space-y-4">
             <h3 className="text-2xl sm:text-2xl font-bold font-inter">
               <span className="text-brand-blue">Focus</span>
-              <span className="text-brand-orange">Flow</span>
+              <span className="text-brand-orange">Tune</span>
             </h3>
             <p className="text-white/70 leading-relaxed text-base sm:text-base">
               {t("footer.description")}

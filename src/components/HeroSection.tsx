@@ -75,7 +75,7 @@ export const HeroSection = ({ onDownloadClick }: { onDownloadClick?: () => void 
               <div className="absolute inset-0 bg-gradient-to-r from-brand-blue/20 to-brand-orange/20 rounded-3xl blur-2xl scale-110"></div>
               <img 
                 src={heroPhoneMockup} 
-                alt="FocusFlow App Interface" 
+                alt="FocusTune App Interface" 
                 className="relative z-10 w-80 sm:w-96 h-auto drop-shadow-2xl animate-float rounded-2xl"
               />
             </div>

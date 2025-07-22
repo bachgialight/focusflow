@@ -1,4 +1,4 @@
-import { Brain, Target, TrendingUp, Heart } from "lucide-react";
+import { Brain, Target, TrendingUp, Heart, Moon } from "lucide-react";
 import appFeaturesMockup from "@/assets/app-features-mockup.png";
 import { useTranslation } from "react-i18next";
 
@@ -25,6 +25,11 @@ export const BenefitsSection = () => {
       icon: Heart,
       title: t("benefits.wellbeing.title"),
       description: t("benefits.wellbeing.description")
+    },
+    {
+      icon: Moon,
+      title: t("benefits.sleep_music.title"),
+      description: t("benefits.sleep_music.description")
     }
   ];
 
